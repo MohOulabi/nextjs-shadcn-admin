@@ -141,6 +141,7 @@ export const SignupForm = () => {
                     error={!!error?.message}
                     placeholder={t('Common.password')}
                     type='password'
+                    autoComplete='new-password'
                     {...field}
                   />
                 </FormControl>
