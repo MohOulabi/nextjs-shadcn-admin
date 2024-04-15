@@ -1,0 +1,15 @@
+languageIds:
+  - javascript
+  - typescript
+  - javascriptreact
+  - typescriptreact
+
+usageMatchRegex:
+  - "[^\\w\\d]t\\s*\\(\\s*['\"`]({key})['\"`]"
+  - "[^\\w\\d]t\\s*\\.rich\\s*\\(\\s*['\"`]({key})['\"`]"
+  - "[^\\w\\d]t\\s*\\.markup\\s*\\(\\s*['\"`]({key})['\"`]"
+  - "[^\\w\\d]t\\s*\\.raw\\s*\\(\\s*['\"`]({key})['\"`]"
+
+scopeRangeRegex: "(?:getTranslations|useTranslations)\\((?:\\s*['\"`]|{\\s*namespace:\\s*['\"`])(.*?)['\"`]"
+
+monopoly: true

@@ -1,0 +1,73 @@
+{
+  "Home": {
+    "title": "الرئيسية",
+    "description": "مرحبا بكم في موقعنا"
+  },
+  "Metadata": {
+    "default_title": "لوحة الادارة",
+    "default_description": "مرحبا بكم في موقعنا",
+    "login_page_title": "تسجيل الدخول",
+    "login_page_description": "تسجيل الدخول إلى لوحة القيادة",
+    "forgot_password_page_title": "هل نسيت كلمة السر",
+    "forgot_password_page_description": "صفحة نسيت كلمة المرور"
+  },
+  "Login": {
+    "title": "مرحبًا بعودتك",
+    "description": "الرجاء تسجيل الدخول للمتابعة",
+    "remember_me": "تذكرنى",
+    "success": "تم تسجيل الدخول بنجاح!"
+  },
+  "ForgotPassword": {
+    "back_to_login": "العودة إلى تسجيل الدخول",
+    "title": "هل نسيت كلمة السر",
+    "success": "تم ارسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني بنجاح",
+    "description": "الرجاء إدخال بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك"
+  },
+  "Common": {
+    "email": "بريد إلكتروني",
+    "password": "كلمة المرور",
+    "login": "تسجيل الدخول",
+    "forgot_password": "هل نسيت كلمة السر",
+    "submit": "يُقدِّم",
+    "total_revenue": "إجمالي الإيرادات",
+    "subscriptions": "الاشتراكات",
+    "sales": "مبيعات",
+    "active_users": "المستخدمين النشطين",
+    "recent_sales": "المبيعات الأخيرة"
+  },
+  "Validation": {
+    "email_required": "البريد الإلكتروني مطلوب",
+    "email_invalid": "البريد الإلكتروني غير صالح",
+    "password_required": "كلمة المرور مطلوبة"
+  },
+  "Dashboard": {
+    "404": "404",
+    "500": "500",
+    "dashboard": "لوحة التحكم",
+    "widgets": "الحاجيات",
+    "charts": "الرسوم البيانية",
+    "add": "إضافة",
+    "customers": "العملاء",
+    "components": "العناصر",
+    "list": "القائمة",
+    "statistics": "الإحصائيات",
+    "tables": "الجداول",
+    "cards": "البطاقات",
+    "forms": "النماذج",
+    "myaccount": "حسابي",
+    "settings": "إعدادات",
+    "billing": "الفواتير",
+    "otp": "كلمة السر لمرة واحدة",
+    "pages": "الصفحات",
+    "login": "تسجيل الدخول",
+    "register": "تسجيل الحساب",
+    "error": "خطأ",
+    "auth": "المصادقة"
+  },
+  "Error": {
+    "500_title": "500 صفحة",
+    "reset_button": "إعادة ضبط",
+    "404_title": "404 صفحة",
+    "404_message": "الصفحة التي تبحث عنها ليست هنا."
+  }
+}

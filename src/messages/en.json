@@ -1,0 +1,73 @@
+{
+  "Home": {
+    "title": "Home",
+    "description": "Welcome to the home page"
+  },
+  "Metadata": {
+    "default_title": "Admin Panel",
+    "default_description": "Default description of the site",
+    "login_page_title": "Login",
+    "login_page_description": "Login to the dashboard",
+    "forgot_password_page_title": "Forgot Password",
+    "forgot_password_page_description": "Forgot password page"
+  },
+  "Login": {
+    "title": "Welcome Back",
+    "description": "Please login to continue",
+    "remember_me": "Remember me",
+    "success": "Logged in successfully!"
+  },
+  "ForgotPassword": {
+    "title": "Forgot Password",
+    "description": "Please enter your email to reset your password",
+    "success": "Password reset link sent to your email",
+    "back_to_login": "Back to Login"
+  },
+  "Common": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "forgot_password": "Forgot Password",
+    "submit": "Submit",
+    "total_revenue": "Total Revenue",
+    "subscriptions": "Subscriptions",
+    "sales": "Sales",
+    "active_users": "Active Users",
+    "recent_sales": "Recent Sales"
+  },
+  "Validation": {
+    "email_required": "Email is required",
+    "email_invalid": "Email is invalid",
+    "password_required": "Password is required"
+  },
+  "Dashboard": {
+    "404": "404",
+    "500": "500",
+    "dashboard": "Dashboard",
+    "widgets": "Widgets",
+    "charts": "Charts",
+    "customers": "Customers",
+    "components": "Components",
+    "list": "List",
+    "add": "Add",
+    "statistics": "Statistics",
+    "tables": "Tables",
+    "cards": "Cards",
+    "forms": "Forms",
+    "myaccount": "My Account",
+    "settings": "Settings",
+    "billing": "Billing",
+    "pages": "Pages",
+    "auth": "Auth",
+    "register": "Register",
+    "login": "Login",
+    "otp": "OTP",
+    "error": "Error"
+  },
+  "Error": {
+    "500_title": "500 Page",
+    "reset_button": "Reset",
+    "404_title": "404 Page",
+    "404_message": "The page you are looking for is not here."
+  }
+}
