@@ -1,5 +1,12 @@
 # Project Specific Documentation here
 
-> :warning: This boilerplate is still under development and still incomplete, if you have any contribution on it, please create a pull request.
+> Will add more details to readme soon
 
-Checkout our frontend [Guidelines](/.docs/README.md) for code practices, folder structure, and more.
+## Recommendations
+
+If you are using vscode, install the following extensions,
+
+- i18n ally
+- Tailwind CSS Intelisense
+- Eslint
+- Prettier - Code Formatter
