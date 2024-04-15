@@ -33,7 +33,10 @@
     "subscriptions": "الاشتراكات",
     "sales": "مبيعات",
     "active_users": "المستخدمين النشطين",
-    "recent_sales": "المبيعات الأخيرة"
+    "recent_sales": "المبيعات الأخيرة",
+    "dashboard": "لوحة التحكم",
+    "download": "تحميل",
+    "sales_overview": "نظرة عامة على المبيعات"
   },
   "Validation": {
     "email_required": "البريد الإلكتروني مطلوب",

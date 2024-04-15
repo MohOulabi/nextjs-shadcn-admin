@@ -6,7 +6,7 @@ const sales = [
   {
     id: '1',
     name: 'Olivia Martin',
-    email: 'olivia.martin@email.com',
+    email: 'olivia.martins@email.com',
     amount: '+$1,999.00',
     avatar: '/avatars/01.png',
     fallback: 'OM',
@@ -56,16 +56,18 @@ export const RecentSales = async () => {
       <CardContent>
         <div className='space-y-8'>
           {sales.map((sale) => (
-            <div key={sale.id} className='flex items-center'>
+            <div key={sale.id} className='flex w-full items-center overflow-hidden'>
               <Avatar className='h-9 w-9'>
                 {/* <AvatarImage src={sale.avatar} alt='Avatar' /> */}
                 <AvatarFallback>{sale.fallback}</AvatarFallback>
               </Avatar>
-              <div className='space-y-1 ltr:ml-4 rtl:mr-4'>
-                <p className='text-sm font-medium leading-none'>{sale.name}</p>
-                <p className='text-sm text-muted-foreground'>{sale.email}</p>
+              <div className='mx-4 space-y-1 overflow-hidden'>
+                <p className='truncate text-sm font-medium leading-none'>{sale.name}</p>
+                <p className='truncate text-sm text-muted-foreground'>{sale.email}</p>
               </div>
-              <div className='font-medium ltr:ml-auto rtl:mr-auto'>{sale.amount}</div>
+              <div className='text-sm font-medium sm:text-base ltr:ml-auto rtl:mr-auto'>
+                {sale.amount}
+              </div>
             </div>
           ))}
         </div>

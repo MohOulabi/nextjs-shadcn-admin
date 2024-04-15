@@ -33,7 +33,10 @@
     "subscriptions": "Subscriptions",
     "sales": "Sales",
     "active_users": "Active Users",
-    "recent_sales": "Recent Sales"
+    "recent_sales": "Recent Sales",
+    "dashboard": "Dashboard",
+    "download": "Download",
+    "sales_overview": "Sales Overview"
   },
   "Validation": {
     "email_required": "Email is required",

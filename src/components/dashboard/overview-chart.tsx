@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 import { useDir } from '@/hooks/use-dir';
+import { useTranslations } from 'next-intl';
 
 const data = [
   {
@@ -56,7 +57,11 @@ const data = [
   },
 ];
 
-export const OverviewChart = () => {
+type OverviewChartProps = {
+  title: string;
+};
+
+export const OverviewChart = ({ title }: OverviewChartProps) => {
   const direction = useDir();
 
   useEffect(() => {
@@ -70,9 +75,9 @@ export const OverviewChart = () => {
 
   return (
     <Card className='lg:col-span-4'>
-      <CardHeader>Sales Overview</CardHeader>
+      <CardHeader>{title}</CardHeader>
       <CardContent>
-        <ResponsiveContainer width='100%' height={350}>
+        <ResponsiveContainer width='100%' className='!h-[240px] md:!h-[350px]'>
           <BarChart
             style={{ direction: 'ltr' }}
             margin={{ left: 0, right: 0 }}

@@ -38,9 +38,9 @@ const DashboardPage: NextPage = async () => {
   return (
     <>
       <div className='flex items-center justify-between space-y-2'>
-        <h1 className='text-2xl font-bold tracking-tight md:text-3xl'>Dashboard</h1>
+        <h1 className='text-2xl font-bold tracking-tight md:text-3xl'>{t('dashboard')}</h1>
         <div className='flex items-center space-x-2'>
-          <Button>Download</Button>
+          <Button>{t('download')}</Button>
         </div>
       </div>
       <div className='flex flex-1 flex-col gap-4 pt-4 xl:gap-6'>
@@ -49,8 +49,8 @@ const DashboardPage: NextPage = async () => {
             <StatsWidget key={index} title={t(title as TranslationKey)} {...widget} />
           ))}
         </div>
-        <div className='grid gap-4 lg:grid-cols-7 xl:gap-6'>
-          <OverviewChart />
+        <div className='flex flex-col gap-4 lg:grid lg:grid-cols-7 xl:gap-6'>
+          <OverviewChart title={t('sales_overview')} />
           <RecentSales />
         </div>
       </div>
