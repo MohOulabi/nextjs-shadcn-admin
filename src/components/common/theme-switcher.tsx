@@ -11,7 +11,10 @@ export const ThemeSwitcher = () => {
 
   return (
     <Select onValueChange={setTheme}>
-      <SelectTrigger hideArrow className='flex w-12 justify-center bg-transparent'>
+      <SelectTrigger
+        aria-label='Select theme'
+        hideArrow
+        className='flex w-12 justify-center bg-transparent'>
         <div>
           <MoonStar width={18} height={18} className='hidden dark:block' />
           <SunMedium width={18} height={18} className='dark:hidden' />

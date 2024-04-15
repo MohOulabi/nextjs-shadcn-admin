@@ -41,7 +41,7 @@ export const LocaleSwitcher = () => {
 
   return (
     <Select defaultValue={locale} onValueChange={updateLocale}>
-      <SelectTrigger className='w-auto min-w-[90px] bg-transparent'>
+      <SelectTrigger aria-label='Select language' className='w-auto min-w-[90px] bg-transparent'>
         <div className='flex items-center gap-2 uppercase'>
           <ReactCountryFlag
             svg
