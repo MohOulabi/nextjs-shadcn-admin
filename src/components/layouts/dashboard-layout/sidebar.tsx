@@ -65,7 +65,7 @@ type SidebarNavProps = {
 export const SidebarNav = ({ heading, ignoreCollapse }: SidebarNavProps) => {
   return (
     <nav className='max-h-screen overflow-y-auto'>
-      <div className='sticky top-0 z-10 bg-background'>{heading}</div>
+      <div className='sticky top-0 z-10 bg-card'>{heading}</div>
       <TooltipProvider delayDuration={0}>
         <div className='flex justify-center text-foreground'>
           <ul className='w-full overflow-x-hidden px-3 py-4'>
