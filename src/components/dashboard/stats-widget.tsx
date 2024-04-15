@@ -15,7 +15,7 @@ export const StatsWidget = ({ content, icon, subContent, title }: StatsWidgetPro
         {icon}
       </CardHeader>
       <CardContent>
-        <div className='text-2xl font-bold'>{content}</div>
+        <div className='text-xl font-bold sm:text-2xl'>{content}</div>
         {subContent && <p className='text-xs text-muted-foreground'>{subContent}</p>}
       </CardContent>
     </Card>

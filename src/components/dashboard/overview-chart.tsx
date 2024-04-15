@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 import { useDir } from '@/hooks/use-dir';
-import { useTranslations } from 'next-intl';
 
 const data = [
   {
