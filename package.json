@@ -14,8 +14,7 @@
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,json}\"",
     "format:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
     "cn-add": "npx shadcn-ui@latest add",
-    "pre:commit": "lint-staged",
-    "prepare": "husky"
+    "pre:commit": "lint-staged"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -83,10 +82,10 @@
   },
   "lint-staged": {
     "**/*.{ts,js,tsx,jsx}": [
-      "yarn lint:fix"
+      "bun run lint:fix"
     ],
     "**/*.{ts,js,tsx,jsx,json,yml}": [
-      "yarn format:write"
+      "bun run format:write"
     ]
   }
 }
