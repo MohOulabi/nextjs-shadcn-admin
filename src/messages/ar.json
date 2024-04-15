@@ -23,7 +23,7 @@
     "title": "انضم إلينا",
     "description": "إنشاء حساب جديد للمتابعة",
     "success": "تم إنشاء حسابك بنجاح!",
-    "already_have_account": "هل لديك حساب؟ تسجيل الدخول"
+    "already_have_account": "هل لديك حساب؟"
   },
   "ForgotPassword": {
     "back_to_login": "العودة إلى تسجيل الدخول",
