@@ -15,7 +15,7 @@ export const MobileSidebar = () => {
           <MenuIcon size={24} />
         </Button>
       </SheetTrigger>
-      <SheetContent dir={dir} side={isRTL ? 'right' : 'left'} className='p-0'>
+      <SheetContent dir={dir} side={isRTL ? 'right' : 'left'} className='bg-card p-0'>
         <SidebarNav
           ignoreCollapse
           heading={
