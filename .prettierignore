@@ -1,0 +1,7 @@
+/cache
+data
+build
+coverage
+.yarn
+.next
+node_modules

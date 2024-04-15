@@ -48,7 +48,10 @@ export const LoginForm = () => {
           id: 'login-success',
           closeButton: true,
         });
-        jsCookie.set('token', token, { expires: DEFAULT_REMEMBER_ME || 1, path: '/' });
+        jsCookie.set('token', token, {
+          expires: DEFAULT_REMEMBER_ME || 1,
+          path: '/',
+        });
         router.replace('/dashboard');
       },
     });

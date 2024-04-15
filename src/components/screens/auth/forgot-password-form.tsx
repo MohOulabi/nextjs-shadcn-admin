@@ -34,7 +34,9 @@ export const ForgotPasswordForm = () => {
   const onSubmit = async (values: ForgotPasswordFormValues) => {
     setIsPending(true);
     await wait(1);
-    toast.success(`${t('ForgotPassword.success')}: ${values.email}`, { closeButton: true });
+    toast.success(`${t('ForgotPassword.success')}: ${values.email}`, {
+      closeButton: true,
+    });
     setIsPending(false);
     form.reset();
   };
