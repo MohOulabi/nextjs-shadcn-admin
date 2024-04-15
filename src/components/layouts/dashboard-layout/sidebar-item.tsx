@@ -62,12 +62,14 @@ const SidebarNavLink = ({ link, ignoreCollapse }: NavLinkProps) => {
   const isOpen = useSidebar((state) => state.isOpen) || ignoreCollapse;
   const t = useTranslations('Dashboard');
 
+  const href = link.hrefAsIs ? link.href : `/dashboard${link.href}`;
+
   if (!isOpen)
     return (
       <Tooltip delayDuration={0}>
         <TooltipTrigger asChild className='duration-0'>
           <NextLink
-            href={`/dashboard${link.href}`}
+            href={href}
             className={cn(
               buttonVariants({ variant: 'ghost' }),
               'relative flex h-12 justify-start hover:bg-accent focus:bg-accent',
@@ -89,7 +91,7 @@ const SidebarNavLink = ({ link, ignoreCollapse }: NavLinkProps) => {
         'relative flex h-12 justify-start hover:bg-accent focus:bg-accent',
         isActive && 'group bg-accent text-primary'
       )}
-      href={`/dashboard${link.href}`}>
+      href={href}>
       <link.icon size={20} className='shrink-0 text-accent-foreground group-[]:text-primary' />
       <span className='absolute capitalize ltr:left-11 rtl:right-11'>{t(link.title)}</span>
     </NextLink>
@@ -129,7 +131,7 @@ const SidebarItemAccordion = ({ link, ignoreCollapse }: NavLinkProps) => {
           <DropdownMenuSeparator />
           {link.children!.map((child) => (
             <DropdownMenuItem key={child.title + child.href} asChild>
-              <NextLink href={`/dashboard${link.href}${child.href}`}>
+              <NextLink href={child.hrefAsIs ? child.href : `/dashboard${link.href}${child.href}`}>
                 <span> {t(child.title)}</span>
               </NextLink>
             </DropdownMenuItem>
@@ -155,7 +157,7 @@ const SidebarItemAccordion = ({ link, ignoreCollapse }: NavLinkProps) => {
         <AccordionContent className='mt-3 space-y-2 pb-1 ltr:pl-4 ltr:pr-1 rtl:pl-1 rtl:pr-4'>
           {link.children!.map((child) => (
             <NextLink
-              href={`/dashboard${link.href}${child.href}`}
+              href={child.hrefAsIs ? child.href : `/dashboard${link.href}${child.href}`}
               key={child.title}
               className={cn(
                 buttonVariants({ variant: 'ghost' }),

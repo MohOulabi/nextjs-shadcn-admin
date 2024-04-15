@@ -13,6 +13,7 @@ type NavLink = {
   title: TranslationKey;
   icon: LucideIcon;
   href: string;
+  hrefAsIs?: boolean;
 };
 
 export type SidebarLinkItem = NavLink & {
@@ -96,10 +97,12 @@ export const sidebarLinks: SidebarLink[] = [
       {
         title: 'login',
         href: '/login',
+        hrefAsIs: true,
       },
       {
-        title: 'register',
-        href: '/register',
+        title: 'signup',
+        href: '/signup',
+        hrefAsIs: true,
       },
       {
         title: 'otp',

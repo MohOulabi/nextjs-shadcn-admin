@@ -11,6 +11,8 @@ type NextPageProps = {
   };
 };
 
+type IntlPath = Paths<IntlMessages>;
+
 type NextPage<T = object> = (
   props: NextPageProps & T
 ) => React.ReactElement | Promise<React.ReactElement> | null;
