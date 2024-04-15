@@ -12,6 +12,7 @@ import { toast } from 'sonner';
 import { useRouter } from '@/i18n';
 import jsCookie from 'js-cookie';
 import { DEFAULT_REMEMBER_ME } from '@/config';
+import { NextLink } from '@/components/common';
 
 const loginSchema = (t: (key: IntlPath) => string) =>
   z
@@ -171,6 +172,13 @@ export const SignupForm = () => {
           <Button disabled={isPending} className='mt-8 h-12 w-full' type='submit'>
             {isPending && <Loader2 className='h-4 w-4 animate-spin ltr:mr-2 rtl:ml-2' />}
             {t('Common.signup')}
+          </Button>
+        </div>
+        <hr className='mb-6 mt-8 border-border' />
+        <div className='flex justify-center gap-1'>
+          <span>{t('Signup.already_have_account')}</span>
+          <Button variant='link' asChild className='h-auto p-0'>
+            <NextLink href='/login'>{t('Common.login')}</NextLink>
           </Button>
         </div>
       </form>

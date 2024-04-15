@@ -50,6 +50,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {isPassword && !endIcon && (
           <button
             type='button'
+            aria-label='Toggle password visibility'
             className={cn(
               'pointer-events-auto absolute inset-y-0 flex items-center rounded-md px-3 focus:outline-none focus-visible:ring-1 focus-visible:ring-ring ltr:right-0 rtl:left-0',
               error ? 'text-destructive' : 'text-muted-foreground'
