@@ -15,7 +15,7 @@ export const AuthLayout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
         </div>
-        <div className='relative min-h-[150px] bg-muted'>
+        <div className='relative top-0 max-h-screen min-h-[150px] bg-muted lg:sticky'>
           <Image
             priority
             src={AuthBG}

@@ -1,4 +1,4 @@
-import { LoginForm } from '@/components/screens/auth/login-form';
+import { SignupForm } from '@/components/screens/auth/signup-form';
 import { Metadata } from 'next';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
@@ -7,13 +7,13 @@ import { pick } from 'lodash';
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('Metadata');
   return {
-    title: t('login_page_title'),
-    description: t('login_page_description'),
+    title: t('signup_page_title'),
+    description: t('signup_page_description'),
   };
 }
 
-const LoginPage: NextPage = async ({ params: { locale } }) => {
-  const t = await getTranslations('Login');
+const SignupPage: NextPage = async ({ params: { locale } }) => {
+  const t = await getTranslations('Signup');
   const messages = await getMessages();
 
   return (
@@ -24,11 +24,11 @@ const LoginPage: NextPage = async ({ params: { locale } }) => {
       </div>
       <NextIntlClientProvider
         locale={locale}
-        messages={pick(messages, ['Login', 'Common', 'Validation'])}>
-        <LoginForm />
+        messages={pick(messages, ['Signup', 'Common', 'Validation'])}>
+        <SignupForm />
       </NextIntlClientProvider>
     </>
   );
 };
 
-export default LoginPage;
+export default SignupPage;

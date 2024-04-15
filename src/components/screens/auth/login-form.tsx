@@ -6,7 +6,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, LockIcon, MailIcon } from 'lucide-react';
-import { MessageKeys, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { NextLink } from '@/components/common';
@@ -15,16 +15,17 @@ import { useRouter } from '@/i18n';
 import jsCookie from 'js-cookie';
 import { DEFAULT_REMEMBER_ME } from '@/config';
 
-const loginSchema = z.object({
-  email: z
-    .string()
-    .min(1, { message: 'Validation.email_required' })
-    .email({ message: 'Validation.email_invalid' }),
-  password: z.string().min(1, { message: 'Validation.password_required' }),
-  remember: z.optional(z.boolean()),
-});
+const loginSchema = (t: (key: IntlPath) => string) =>
+  z.object({
+    email: z
+      .string()
+      .min(1, { message: t('Validation.email_required') })
+      .email({ message: t('Validation.email_invalid') }),
+    password: z.string().min(1, { message: t('Validation.password_required') }),
+    remember: z.optional(z.boolean()),
+  });
 
-export type LoginFormValues = z.infer<typeof loginSchema>;
+export type LoginFormValues = z.infer<ReturnType<typeof loginSchema>>;
 
 export const LoginForm = () => {
   const t = useTranslations();
@@ -32,7 +33,7 @@ export const LoginForm = () => {
   const router = useRouter();
 
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(loginSchema(t)),
     defaultValues: {
       email: 'admin@admin.com',
       password: 'admin123',
@@ -69,6 +70,7 @@ export const LoginForm = () => {
                 <FormLabel>{t('Common.email')}</FormLabel>
                 <FormControl>
                   <Input
+                    inputMode='email'
                     startIcon={<MailIcon />}
                     error={!!error?.message}
                     placeholder={t('Common.email')}
@@ -76,9 +78,7 @@ export const LoginForm = () => {
                     autoComplete='email'
                   />
                 </FormControl>
-                <FormMessage>
-                  {error?.message && t(error.message as MessageKeys<IntlMessages, 'Validation'>)}
-                </FormMessage>
+                <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
@@ -98,9 +98,7 @@ export const LoginForm = () => {
                     autoComplete='current-password'
                   />
                 </FormControl>
-                <FormMessage>
-                  {error?.message && t(error.message as MessageKeys<IntlMessages, 'Validation'>)}
-                </FormMessage>
+                <FormMessage>{error?.message}</FormMessage>
               </FormItem>
             )}
           />
