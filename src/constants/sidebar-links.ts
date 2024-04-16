@@ -105,8 +105,9 @@ export const sidebarLinks: SidebarLink[] = [
         hrefAsIs: true,
       },
       {
-        title: 'otp',
-        href: '/otp',
+        title: 'reset_password',
+        href: '/forgot-password',
+        hrefAsIs: true,
       },
     ],
   },

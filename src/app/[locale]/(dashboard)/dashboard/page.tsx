@@ -1,6 +1,6 @@
-import { OverviewChart } from '@/components/dashboard/overview-chart';
-import { RecentSales } from '@/components/dashboard/recent-sales';
-import { StatsWidget, StatsWidgetProps } from '@/components/dashboard/stats-widget';
+import { OverviewChart } from '@/components/screens/dashboard/overview-chart';
+import { RecentSales } from '@/components/screens/dashboard/recent-sales';
+import { StatsWidget, StatsWidgetProps } from '@/components/screens/dashboard/stats-widget';
 import { Button } from '@/components/ui/button';
 import { DollarSignIcon, UsersIcon, ActivityIcon, CreditCardIcon } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';

@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect } from 'react';
-import { Card, CardContent, CardHeader } from '../ui/card';
-import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import { Card, CardContent, CardHeader } from '../../ui/card';
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, TooltipProps } from 'recharts';
 import { useDir } from '@/hooks/use-dir';
+import { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent';
 
 const data = [
   {
@@ -107,14 +108,30 @@ export const OverviewChart = ({ title }: OverviewChartProps) => {
             <Tooltip
               wrapperClassName='!bg-popover !rounded-md !border-border !text-popover-foreground'
               labelClassName='!text-popover-foreground'
+              content={<TooltipContent />}
               cursor={{
                 className: 'fill-accent',
               }}
             />
-            <Bar dataKey='sales' className='fill-primary' radius={[4, 4, 0, 0]} />
+            <Bar dataKey='sales' className='fill-primary' radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </CardContent>
     </Card>
   );
+};
+
+const TooltipContent = ({ payload, active, label }: TooltipProps<ValueType, NameType>) => {
+  if (active && payload && payload.length) {
+    return (
+      <Card className='!rounded-md !border-border !bg-popover !text-popover-foreground'>
+        <CardHeader className='p-4 pb-0'>{label}</CardHeader>
+        <CardContent className='p-4 pt-0'>
+          <p className='text-sm'>Sales: ${payload[0].value}</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  return null;
 };

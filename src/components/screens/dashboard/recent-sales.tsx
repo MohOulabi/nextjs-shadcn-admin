@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { Avatar, AvatarFallback } from '../ui/avatar';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Avatar, AvatarFallback } from '../../ui/avatar';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/card';
 
 const sales = [
   {
