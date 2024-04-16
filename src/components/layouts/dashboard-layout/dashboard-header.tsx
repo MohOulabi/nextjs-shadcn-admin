@@ -1,5 +1,5 @@
 import { LocaleSwitcher, ThemeSwitcher } from '@/components/common';
-import { UserNav } from './use-nav';
+import { UserNav } from './user-nav';
 import { MobileSidebar } from './mobile-sidebar';
 
 export const DashboardHeader = () => {

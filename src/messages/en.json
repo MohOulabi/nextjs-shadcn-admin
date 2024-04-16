@@ -82,7 +82,8 @@
     "login": "Login",
     "otp": "OTP",
     "error": "Error",
-    "reset_password": "Reset Password"
+    "reset_password": "Reset Password",
+    "logout": "Logout"
   },
   "Error": {
     "500_title": "500 Page",
