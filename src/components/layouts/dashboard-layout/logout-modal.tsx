@@ -48,8 +48,12 @@ export const LogoutModal = ({ isOpen, onClose }: LogoutModalProps) => {
       </Dialog>
     );
 
+  const closeDrawer = (v: boolean) => {
+    if (!v) onClose();
+  };
+
   return (
-    <Drawer open={isOpen} onClose={onClose}>
+    <Drawer onOpenChange={closeDrawer} open={isOpen}>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>You're About to Logout</DrawerTitle>
