@@ -66,7 +66,7 @@ export const UserNav = () => {
           <DropdownMenuLabel>
             <div className='flex flex-col'>
               <div className='mb-1 text-sm leading-none'>mohammadou</div>
-              <div className='text-xs text-muted-foreground'>it.moh.ou@gmail.com</div>
+              <div className='text-xs text-muted-foreground'>email.user@email.com</div>
             </div>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
