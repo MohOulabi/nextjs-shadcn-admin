@@ -1,14 +1,8 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogFooter, DialogTitle } from '@/components/ui/dialog';
-import {
-  Drawer,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-} from '@/components/ui/drawer';
+import { Button } from '@/ui/button';
+import { Dialog, DialogContent, DialogFooter, DialogTitle } from '@/ui/dialog';
+import { Drawer, DrawerContent, DrawerFooter, DrawerHeader, DrawerTitle } from '@/ui/drawer';
 import useMediaQuery from '@/hooks/use-media-query';
 import { useRouter } from '@/i18n';
 import { TriangleAlert } from 'lucide-react';

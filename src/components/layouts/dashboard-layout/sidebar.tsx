@@ -68,7 +68,7 @@ export const SidebarNav = ({ heading, ignoreCollapse }: SidebarNavProps) => {
       <div className='sticky top-0 z-10 bg-card'>{heading}</div>
       <TooltipProvider delayDuration={0}>
         <div className='flex justify-center text-foreground'>
-          <ul className='w-full overflow-x-hidden px-3 py-4'>
+          <ul className='w-full overflow-hidden px-3 py-4'>
             {sidebarLinks.map((link, idx) => (
               <SidebarItem link={link} key={idx} ignoreCollapse={ignoreCollapse} />
             ))}
