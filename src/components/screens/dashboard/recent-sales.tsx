@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Avatar, AvatarFallback } from '../../ui/avatar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/card';
+// import { ScrollArea } from '@/components/ui/scroll-area';
 
 const sales = [
   {
@@ -53,6 +54,7 @@ export const RecentSales = async () => {
         <CardTitle>{t('Common.recent_sales')}</CardTitle>
         <CardDescription>You made 5 sales in the last 24 hours.</CardDescription>
       </CardHeader>
+      {/* <ScrollArea className='h-[350px]'> */}
       <CardContent>
         <div className='space-y-8'>
           {sales.map((sale) => (
@@ -72,6 +74,7 @@ export const RecentSales = async () => {
           ))}
         </div>
       </CardContent>
+      {/* </ScrollArea> */}
     </Card>
   );
 };
