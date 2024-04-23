@@ -39,7 +39,7 @@ const DashboardPage: NextPage = async () => {
     <>
       <div className='flex items-center justify-between space-y-2'>
         <h1 className='text-2xl font-bold tracking-tight md:text-3xl'>{t('dashboard')}</h1>
-        <div className='flex items-center space-x-2'>
+        <div className='flex items-center'>
           <Button>{t('download')}</Button>
         </div>
       </div>
