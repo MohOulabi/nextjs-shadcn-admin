@@ -4,12 +4,19 @@ import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/ui/sheet';
 import { MenuIcon } from 'lucide-react';
 import { SidebarNav } from './sidebar';
 import { useDir } from '@/hooks/use-dir';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const MobileSidebar = () => {
   const dir = useDir();
   const isRTL = dir === 'rtl';
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => setIsOpen(false), [pathname]);
+
   return (
-    <Sheet>
+    <Sheet onOpenChange={setIsOpen} open={isOpen}>
       <SheetTrigger asChild>
         <Button className='size-9 px-1 py-1' variant='ghost' aria-label='toggle sidebar'>
           <MenuIcon size={24} />
