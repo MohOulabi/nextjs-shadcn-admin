@@ -73,7 +73,7 @@ export const UserNav = () => {
           <DropdownMenuGroup>
             {nav_items.map((item) => (
               <DropdownMenuItem key={item.title + item.href} asChild>
-                <NextLink href={`dashboard${item.href}`} className='flex justify-between'>
+                <NextLink href={`/dashboard/${item.href}`} className='flex justify-between'>
                   <span className='grow'>{t(item.title)}</span>
                   <DropdownMenuShortcut>{item.shortcut}</DropdownMenuShortcut>
                 </NextLink>
