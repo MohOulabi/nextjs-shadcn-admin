@@ -17,13 +17,16 @@
     "title": "مرحبًا بعودتك",
     "description": "الرجاء تسجيل الدخول للمتابعة",
     "remember_me": "تذكرنى",
-    "success": "تم تسجيل الدخول بنجاح!"
+    "success": "تم تسجيل الدخول بنجاح!",
+    "no_account": "ليس لديك حساب؟",
+    "signup": "اشتراك"
   },
   "Signup": {
     "title": "انضم إلينا",
     "description": "إنشاء حساب جديد للمتابعة",
     "success": "تم إنشاء حسابك بنجاح!",
-    "already_have_account": "هل لديك حساب؟"
+    "already_have_account": "هل لديك حساب؟",
+    "back_to_login": "العودة لتسجيل الدخول"
   },
   "ForgotPassword": {
     "back_to_login": "العودة إلى تسجيل الدخول",
@@ -48,7 +51,9 @@
     "sales_overview": "نظرة عامة على المبيعات",
     "password_confirmation": "تأكيد كلمة المرور",
     "username": "اسم المستخدم",
-    "full_name": "الاسم الكامل"
+    "full_name": "الاسم الكامل",
+    "next": "التالي",
+    "previous": "سابق"
   },
   "Validation": {
     "email_required": "البريد الإلكتروني مطلوب",

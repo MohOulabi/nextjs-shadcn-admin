@@ -17,13 +17,16 @@
     "title": "Welcome Back",
     "description": "Please login to continue",
     "remember_me": "Remember me",
-    "success": "Logged in successfully!"
+    "success": "Logged in successfully!",
+    "no_account": "Don't have an account?",
+    "signup": "Signup"
   },
   "Signup": {
     "title": "Create Account",
     "description": "Please enter your details to create an account",
     "success": "Account created successfully!",
-    "already_have_account": "Already have an account?"
+    "already_have_account": "Already have an account?",
+    "back_to_login": "Back to login"
   },
   "ForgotPassword": {
     "title": "Forgot Password",
@@ -48,7 +51,9 @@
     "sales_overview": "Sales Overview",
     "password_confirmation": "Password Confirmation",
     "username": "Username",
-    "full_name": "Full Name"
+    "full_name": "Full Name",
+    "next": "Next",
+    "previous": "Previous"
   },
   "Validation": {
     "email_required": "Email is required",

@@ -2,7 +2,7 @@ import { LoginForm } from '@/components/screens/auth/login-form';
 import { Metadata } from 'next';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import { pick } from 'lodash';
+import pick from 'lodash/pick';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('Metadata');

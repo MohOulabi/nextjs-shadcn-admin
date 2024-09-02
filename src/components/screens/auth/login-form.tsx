@@ -128,6 +128,16 @@ export const LoginForm = () => {
             {t('Common.login')}
           </Button>
         </div>
+        <div className='mt-4 text-center'>
+          <p className='text-sm text-muted-foreground'>
+            {t('Login.no_account')}{' '}
+            <NextLink
+              href='/signup'
+              className='font-semibold text-primary focus:underline focus:outline-none'>
+              {t('Login.signup')}
+            </NextLink>
+          </p>
+        </div>
       </form>
     </Form>
   );
