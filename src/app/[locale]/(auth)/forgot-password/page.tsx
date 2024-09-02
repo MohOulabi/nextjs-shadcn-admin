@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import { pick } from 'lodash';
+import pick from 'lodash/pick';
 import { ForgotPasswordForm } from '@/components/screens/auth/forgot-password-form';
 import { NextLink } from '@/components/common';
 import { ArrowLeft } from 'lucide-react';

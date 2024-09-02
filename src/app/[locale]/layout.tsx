@@ -7,7 +7,7 @@ import { Cairo, Inter } from 'next/font/google';
 import { cn } from '@/utils/cn';
 import { Toaster } from '@/ui/sonner';
 import { useMessages } from 'next-intl';
-import { pick } from 'lodash';
+import pick from 'lodash/pick';
 
 const cairo = Cairo({
   weight: ['400', '500', '600', '700'],
@@ -60,7 +60,7 @@ export default function RootLocaleLayout({ children, params: { locale } }: Layou
           inter.variable,
           locale === 'ar' ? 'font-cairo' : 'font-inter'
         )}>
-        <Providers locale={locale} messages={pick(messages, 'Error')}>
+        <Providers locale={locale} messages={pick(messages, ['Error', 'Common'])}>
           {children}
           <Toaster position={dir(locale) === 'rtl' ? 'top-left' : 'top-right'} richColors />
         </Providers>
